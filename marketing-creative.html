@@ -810,6 +810,27 @@ img,svg{max-width:100%}
 @media(max-width:600px){.back-to-top{right:16px;bottom:16px;width:44px;height:44px}}
 </style>
 
+
+<style>
+nav .nav-right{display:flex;gap:18px;align-items:center;margin-left:auto}
+nav .navmeta{margin:0}
+.all-services-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(112,87,255,.25);
+  border-radius:999px;padding:9px 13px;
+  color:#5b42dc;font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  background:rgba(255,255,255,.45);
+  transition:.2s ease;
+}
+.all-services-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-1px)}
+@media(max-width:520px){
+  nav .nav-right{gap:8px}
+  nav .navmeta{display:none}
+  .all-services-btn{padding:9px 11px;font-size:.54rem;white-space:nowrap}
+}
+</style>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23171515'/%3E%3Cpath d='M18 46 29.5 17h5L46 46h-7l-2.2-6.2H27.2L25 46h-7Zm11.2-12h5.6L32 25.7 29.2 34Z' fill='%23f4efe7'/%3E%3C/svg%3E">
 </head>
 <body id="top">
 
@@ -822,9 +843,8 @@ img,svg{max-width:100%}
 </svg>
 
 <nav class="glass">
- <a class="logo" href="#">ANOTHER</a><a class="button" href="index.html">ALL SERVICES</a>
- <span class="navmeta">MARKETING / CREATIVE / DIGITAL</span>
- <a class="button dark" href="https://lin.ee/5E5Cibq" target="_blank">คุยกับเรา <svg class="icon"><use href="#arrow"/></svg></a>
+ <a class="logo" href="#">ANOTHER</a>
+ <div class="nav-right"><span class="navmeta">MARKETING · CREATIVE</span><a class="all-services-btn" href="index.html">ALL SERVICES <span>↗</span></a></div>
 </nav>
 
 <header class="hero" id="top">
