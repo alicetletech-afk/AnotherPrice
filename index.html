@@ -569,11 +569,205 @@ body.modal-open{overflow:hidden}
 }
 </style>
 
+
+<style>
+/* ANOTHER — brand cue before services */
+.brand-intro{
+  position:relative;
+  overflow:hidden;
+  padding:86px 0 72px;
+  border-bottom:1px solid var(--line);
+  isolation:isolate;
+}
+.brand-intro:before{
+  content:"";
+  position:absolute;
+  width:520px;height:520px;
+  left:-160px;top:-230px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(118,88,255,.13),rgba(118,88,255,.045) 38%,transparent 68%);
+  filter:blur(8px);
+  z-index:-2;
+}
+.brand-intro:after{
+  content:"";
+  position:absolute;
+  width:470px;height:470px;
+  right:-120px;bottom:-290px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(215,25,32,.11),rgba(215,25,32,.035) 42%,transparent 70%);
+  filter:blur(8px);
+  z-index:-2;
+}
+.brand-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(280px,.82fr);
+  gap:7vw;
+  align-items:end;
+}
+.brand-label{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:28px;
+  font-size:.6rem;
+  letter-spacing:.17em;
+  color:var(--muted);
+}
+.brand-label:before{
+  content:"";
+  width:34px;height:1px;background:var(--ink);
+}
+.brand-statement{
+  margin:0;
+  max-width:900px;
+  font-size:clamp(3.4rem,6.8vw,7.2rem);
+  line-height:.91;
+  letter-spacing:-.065em;
+  font-weight:500;
+}
+.brand-statement em{
+  font-weight:300;
+  font-style:italic;
+  background:linear-gradient(100deg,var(--ink) 8%,var(--violet) 48%,var(--red) 72%,var(--ink) 100%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:brandShift 16s ease-in-out infinite;
+}
+.brand-side{
+  max-width:420px;
+  justify-self:end;
+}
+.brand-side p{
+  margin:0;
+  font-family:"IBM Plex Sans Thai",sans-serif;
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1.9;
+}
+.brand-mini{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:24px;
+  font-size:.57rem;
+  letter-spacing:.14em;
+  color:var(--muted);
+}
+.brand-mini .dot{
+  width:7px;height:7px;border-radius:50%;
+  background:linear-gradient(135deg,var(--violet),var(--red));
+  box-shadow:0 0 0 6px rgba(118,88,255,.055);
+}
+.brand-orbit{
+  position:absolute;
+  width:210px;height:210px;
+  right:7vw;top:22px;
+  border:1px solid rgba(23,21,21,.09);
+  border-radius:50%;
+  z-index:-1;
+}
+.brand-orbit:before,.brand-orbit:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+}
+.brand-orbit:before{
+  width:9px;height:9px;
+  left:25px;top:35px;
+  background:var(--violet);
+  box-shadow:0 0 0 8px rgba(118,88,255,.06);
+}
+.brand-orbit:after{
+  width:7px;height:7px;
+  right:27px;bottom:38px;
+  background:var(--red);
+  box-shadow:0 0 0 8px rgba(215,25,32,.05);
+}
+
+/* moving brand strip */
+.brand-marquee{
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.12);
+}
+.brand-track{
+  display:flex;
+  width:max-content;
+  padding:13px 0;
+  animation:anotherMarquee 28s linear infinite;
+}
+.brand-track span{
+  white-space:nowrap;
+  font-size:.64rem;
+  letter-spacing:.16em;
+  color:#4f4945;
+}
+.brand-track i{
+  font-style:normal;
+  margin:0 18px;
+  color:var(--violet);
+}
+.brand-track i:nth-of-type(even){color:var(--red)}
+@keyframes anotherMarquee{to{transform:translateX(-50%)}}
+
+@media(max-width:760px){
+  .brand-intro{padding:62px 0 52px}
+  .brand-grid{grid-template-columns:1fr;gap:30px}
+  .brand-statement{font-size:clamp(3.2rem,15vw,5.2rem)}
+  .brand-side{justify-self:start;max-width:100%}
+  .brand-orbit{width:150px;height:150px;right:-45px;top:30px}
+  .brand-track{animation-duration:24s}
+}
+@media(prefers-reduced-motion:reduce){
+  .brand-track{animation:none}
+}
+</style>
+
 </head>
 <body>
 <header class="wrap">
  <nav><a class="logo" href="index.html">ANOTHER</a><span class="nav-meta">SERVICES / PRICING</span></nav>
 </header>
+
+
+<section class="brand-intro">
+ <div class="brand-orbit" aria-hidden="true"></div>
+ <div class="wrap brand-grid">
+  <div>
+   <div class="brand-label">ANOTHER / INDEPENDENT STUDIO</div>
+   <h2 class="brand-statement">ANOTHER WAY<br>TO MAKE <em>IDEAS HAPPEN.</em></h2>
+  </div>
+  <div class="brand-side">
+   <p>พื้นที่สำหรับไอเดียที่อยากไปต่อให้ไกลกว่าเดิม — ตั้งแต่ Marketing & Creative ไปจนถึง Language & China โดยคิดทั้งภาพใหญ่และลงมือทำจริง</p>
+   <div class="brand-mini"><span class="dot"></span><span>THINK · MAKE · COMMUNICATE · MOVE</span></div>
+  </div>
+ </div>
+</section>
+
+<div class="brand-marquee" aria-hidden="true">
+ <div class="brand-track">
+  <span>STRATEGY</span><i>✦</i>
+  <span>CREATIVE</span><i>✦</i>
+  <span>MARCOM</span><i>✦</i>
+  <span>CONTENT</span><i>✦</i>
+  <span>LANGUAGE</span><i>✦</i>
+  <span>CHINA</span><i>✦</i>
+  <span>EXECUTION</span><i>✦</i>
+  <span>ANOTHER WAY TO MAKE IT WORK</span><i>✦</i>
+
+  <span>STRATEGY</span><i>✦</i>
+  <span>CREATIVE</span><i>✦</i>
+  <span>MARCOM</span><i>✦</i>
+  <span>CONTENT</span><i>✦</i>
+  <span>LANGUAGE</span><i>✦</i>
+  <span>CHINA</span><i>✦</i>
+  <span>EXECUTION</span><i>✦</i>
+  <span>ANOTHER WAY TO MAKE IT WORK</span><i>✦</i>
+ </div>
+</div>
 
 <section class="hero">
  <div class="wrap">
