@@ -540,6 +540,86 @@ img,svg{max-width:100%}
 }
 </style>
 
+
+<style>
+/* V3.7 — manifesto becomes a transition, not a second hero */
+.bridge{
+  min-height:0 !important;
+  padding:64px 0 68px !important;
+  border-bottom:1px solid var(--line);
+}
+.bridge-inner{
+  max-width:1340px;
+}
+.bridge h2{
+  max-width:none !important;
+  margin:0 !important;
+  font-size:clamp(2rem,2.8vw,2.7rem) !important;
+  line-height:1.15 !important;
+  letter-spacing:-.035em !important;
+  white-space:nowrap;
+  font-weight:600;
+}
+.bridge h2 br{display:none}
+.bridge h2 em{font-weight:300;font-style:italic}
+.bridge h2 .accent:after{
+  height:4px;
+  bottom:-.08em;
+}
+.bridge p{
+  max-width:650px !important;
+  margin:18px auto 0 !important;
+  font-size:.78rem !important;
+  line-height:1.75 !important;
+}
+.bridge .textlink{display:none !important}
+
+/* Pricing should clearly outrank the transition */
+.pricing{padding-top:88px !important}
+.price-head h2{
+  font-size:clamp(5rem,6.5vw,7.3rem) !important;
+  line-height:.87 !important;
+}
+.thai-lead{
+  margin-bottom:12px;
+  font-size:.7rem;
+}
+
+@media(max-width:820px){
+  .bridge{
+    padding:50px 0 54px !important;
+  }
+  .bridge h2{
+    font-size:clamp(1.75rem,6.5vw,2.5rem) !important;
+    white-space:normal;
+    line-height:1.13 !important;
+  }
+  .bridge h2 br{display:none}
+  .bridge p{
+    max-width:520px !important;
+    font-size:.76rem !important;
+    margin-top:15px !important;
+  }
+  .pricing{padding-top:68px !important}
+  .price-head h2{
+    font-size:clamp(3rem,13.5vw,4.2rem) !important;
+  }
+}
+@media(max-width:520px){
+  .bridge{
+    padding:42px 0 46px !important;
+  }
+  .bridge h2{
+    font-size:clamp(1.65rem,7.5vw,2.15rem) !important;
+    line-height:1.14 !important;
+  }
+  .bridge p{
+    font-size:.72rem !important;
+    line-height:1.7 !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
