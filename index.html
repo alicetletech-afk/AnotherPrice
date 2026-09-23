@@ -620,6 +620,136 @@ img,svg{max-width:100%}
 }
 </style>
 
+
+<style>
+/* V3.8 — centered 55/45 visual balance for hero + closing CTA */
+@media(min-width:1024px){
+
+  /* HERO */
+  .hero{
+    min-height:610px !important;
+    padding:74px 0 72px !important;
+    display:flex;
+    align-items:center;
+  }
+  .hero .wrap{
+    width:min(1180px,calc(100% - 110px)) !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr) !important;
+    column-gap:7vw !important;
+    align-items:center !important;
+  }
+  .hero .eyebrow{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    align-self:end;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    grid-column:1 !important;
+    grid-row:2 !important;
+    align-self:start;
+    font-size:clamp(4.5rem,5.6vw,6.35rem) !important;
+    line-height:1.04 !important;
+    max-width:660px !important;
+    margin:0 !important;
+  }
+  .hero-bottom{
+    grid-column:2 !important;
+    grid-row:1 / span 2 !important;
+    align-self:center !important;
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    gap:25px !important;
+    padding:0 !important;
+    max-width:480px;
+  }
+  .hero-copy{
+    max-width:470px !important;
+    font-size:1.05rem !important;
+    line-height:1.95 !important;
+  }
+  .hero .actions{
+    justify-content:flex-start !important;
+    gap:10px;
+  }
+  .hero .button{
+    padding:12px 16px;
+  }
+
+  /* CLOSING CTA */
+  .final{
+    min-height:590px !important;
+    padding:76px 0 !important;
+    display:flex;
+    align-items:center;
+  }
+  .final .wrap{
+    width:min(1180px,calc(100% - 110px)) !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr) !important;
+    column-gap:7vw !important;
+    align-items:center !important;
+  }
+  .final h2{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    align-self:center;
+    max-width:670px !important;
+    margin:0 !important;
+    font-size:clamp(4.6rem,5.8vw,6.6rem) !important;
+    line-height:.91 !important;
+  }
+  .final-bottom{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:center !important;
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    max-width:480px;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:none !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+  .final-bottom:before{
+    content:"";
+    display:block;
+    width:54px;
+    height:1px;
+    margin-bottom:25px;
+    background:linear-gradient(90deg,#9b84ff,#c3b7ff);
+  }
+  .final-bottom p{
+    max-width:470px !important;
+    font-size:1rem !important;
+    line-height:1.9 !important;
+    color:#bbb7c2;
+  }
+  .final .actions{
+    justify-content:flex-start !important;
+    margin-top:26px !important;
+    gap:10px;
+  }
+  .final .button{
+    padding:12px 16px !important;
+  }
+}
+
+/* On very wide screens keep both compositions in the visual middle,
+   rather than stretching them toward the viewport edges. */
+@media(min-width:1500px){
+  .hero .wrap,.final .wrap{
+    width:min(1240px,calc(100% - 140px)) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
