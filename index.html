@@ -475,6 +475,71 @@ img,svg{max-width:100%}
 }
 </style>
 
+
+<style>
+/* V3.6 — simplified flow + Thai-forward service language */
+.bridge{
+  padding:92px 0 98px;
+  text-align:center;
+}
+.bridge-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.bridge h2{
+  max-width:980px;
+  font-size:clamp(4rem,7vw,7rem);
+  line-height:.92;
+  margin:0;
+}
+.bridge p{
+  max-width:690px;
+  margin:30px auto 17px;
+  font-size:.92rem;
+  line-height:1.9;
+  color:var(--muted);
+}
+.bridge .textlink{margin-top:3px}
+.thai-lead{
+  font-size:.72rem;
+  font-weight:500;
+  color:var(--violet);
+  margin-bottom:14px;
+}
+.breakrow .th{font-family:"IBM Plex Sans Thai","Tahoma",sans-serif}
+.breakrow strong.th{font-size:.82rem;font-weight:500}
+.breakrow a.th{font-size:.64rem}
+.name.th{font-weight:600}
+.desc.th{font-weight:400}
+
+@media(min-width:1024px){
+  /* compact the upper page now that the bridge owns the transition */
+  .hero{min-height:620px;padding:72px 0 66px}
+  .hero .wrap{
+    grid-template-columns:minmax(0,1.35fr) minmax(350px,.65fr);
+    column-gap:5.5vw;
+  }
+  .hero h1{font-size:clamp(5rem,6.7vw,7.5rem)}
+  .hero-bottom{padding-bottom:10px}
+  .bridge{padding:86px 0 92px}
+  .pricing{padding-top:78px}
+}
+@media(max-width:820px){
+  .bridge{padding:70px 0 72px}
+  .bridge h2{font-size:clamp(3rem,13vw,4.5rem)}
+  .bridge p{font-size:.84rem}
+  .thai-lead{font-size:.66rem;margin-bottom:11px}
+}
+@media(max-width:520px){
+  .bridge{padding:62px 0 66px}
+  .bridge h2{font-size:13.2vw;line-height:.96}
+  .bridge p{margin-top:24px}
+  .breakrow strong.th{font-size:.72rem}
+  .breakrow a.th{font-size:.57rem}
+}
+</style>
+
 </head>
 <body>
 
@@ -489,7 +554,7 @@ img,svg{max-width:100%}
 <nav class="glass">
  <a class="logo" href="#top">ANOTHER</a>
  <span class="navmeta">MARKETING / CREATIVE / DIGITAL</span>
- <a class="button dark" href="https://lin.ee/5E5Cibq" target="_blank">LET'S TALK <svg class="icon"><use href="#arrow"/></svg></a>
+ <a class="button dark" href="https://lin.ee/5E5Cibq" target="_blank">คุยกับเรา <svg class="icon"><use href="#arrow"/></svg></a>
 </nav>
 
 <header class="hero" id="top">
@@ -499,8 +564,8 @@ img,svg{max-width:100%}
   <div class="hero-bottom">
    <div class="hero-copy th">ช่วยเปลี่ยนไอเดียให้เป็น <strong>แผน · คอนเทนต์ · ครีเอทีฟ</strong> และงานที่พร้อมใช้งานจริง ตั้งแต่คิด Direction ไปจนถึง Execution</div>
    <div class="actions">
-    <a class="button dark" href="https://lin.ee/5E5Cibq" target="_blank">START A PROJECT <svg class="icon"><use href="#arrow"/></svg></a>
-    <a class="button" href="#services">VIEW SERVICES <svg class="icon"><use href="#down"/></svg></a>
+    <a class="button dark" href="https://lin.ee/5E5Cibq" target="_blank">คุยโปรเจกต์ <svg class="icon"><use href="#arrow"/></svg></a>
+    <a class="button" href="#services">ดูบริการ <svg class="icon"><use href="#down"/></svg></a>
    </div>
   </div>
  </div>
@@ -513,43 +578,40 @@ img,svg{max-width:100%}
  </div>
 </div>
 
-<section class="section intro">
- <div class="wrap section-grid">
-  <div class="label">01 / WHAT WE DO</div>
-  <div>
+<section class="section intro bridge">
+ <div class="wrap bridge-inner">
    <h2>FROM <em>IDEA</em><br>TO SOMETHING<br>THAT <span class="accent">WORKS.</span></h2>
-   <p class="th">ไม่จำเป็นต้องเริ่มด้วย Brief ที่สมบูรณ์ เล่าโจทย์ เป้าหมาย หรือสิ่งที่กำลังติดอยู่มาได้ แล้วค่อยเลือก Scope ที่เหมาะกับโปรเจกต์</p>
-   <a class="textlink th" href="https://lin.ee/5E5Cibq" target="_blank">ไม่แน่ใจว่าต้องเริ่มจากบริการไหน <svg class="icon"><use href="#arrow"/></svg></a>
-  </div>
+   <p class="th">ไม่จำเป็นต้องเริ่มด้วยบรีฟที่สมบูรณ์ เล่าโจทย์ เป้าหมาย หรือสิ่งที่กำลังติดอยู่มาได้ แล้วค่อยเลือก Scope ที่เหมาะกับโปรเจกต์</p>
+   <a class="textlink th" href="https://lin.ee/5E5Cibq" target="_blank">ยังไม่แน่ใจว่าจะเริ่มตรงไหน? คุยกับเราก่อนได้ <svg class="icon"><use href="#arrow"/></svg></a>
  </div>
 </section>
 
 <section class="pricing" id="services">
  <div class="wrap">
   <div class="price-head">
-   <div><div class="label">02 / SERVICES & RATE</div><h2>CHOOSE<br><em>WHAT YOU NEED.</em></h2></div>
+   <div><div class="thai-lead th">เลือกเฉพาะสิ่งที่โปรเจกต์ต้องการ</div><h2>CHOOSE<br><em>WHAT YOU NEED.</em></h2></div>
    <p class="th">ราคาเริ่มต้น Final quotation ประเมินตาม Scope, Requirement และความซับซ้อนของแต่ละโปรเจกต์</p>
   </div>
 
   <div class="rate-card">
    <div class="table-head"><div>NO.</div><div>SERVICE</div><div>WHAT'S INCLUDED</div><div>STARTING FROM</div></div>
-   <div class="row"><div class="num">01</div><div class="name">Marketing & Campaign Plan</div><div class="desc">Strategy · Concept · Key Message · Channel & Content Direction</div><div class="price">2,500.-</div></div>
-   <div class="row"><div class="num">02</div><div class="name">Content Plan & Calendar</div><div class="desc">Content Pillars · 10–15 Ideas · Calendar · Tone & Direction</div><div class="price">1,500.-</div></div>
-   <div class="row"><div class="num">03</div><div class="name">Copywriting & MarCom</div><div class="desc">Social · Corporate · Campaign · Website · TH–EN Localization</div><div class="price">500.-<small>PER PIECE</small></div></div>
-   <div class="row"><div class="num">04</div><div class="name">Creative Package <span class="pill">4 SETS</span></div><div class="desc">Creative Concept · Artwork · Caption / Ad Copy</div><div class="price">3,500.-</div></div>
+   <div class="row"><div class="num">01</div><div class="name th">วางแผนการตลาดและแคมเปญ</div><div class="desc th">วิเคราะห์โจทย์ · คอนเซ็ปต์แคมเปญ · Key Message · ช่องทางและทิศทางคอนเทนต์</div><div class="price">2,500.-</div></div>
+   <div class="row"><div class="num">02</div><div class="name th">วางแผนคอนเทนต์และปฏิทิน</div><div class="desc th">Content Pillars · ไอเดียคอนเทนต์ 10–15 หัวข้อ · ปฏิทิน · Tone & Direction</div><div class="price">1,500.-</div></div>
+   <div class="row"><div class="num">03</div><div class="name th">Copywriting & MarCom</div><div class="desc th">Social · Corporate · แคมเปญ · Website · TH–EN Localization</div><div class="price">500.-<small>PER PIECE</small></div></div>
+   <div class="row"><div class="num">04</div><div class="name th">Creative Package <span class="pill">4 SETS</span></div><div class="desc th">คอนเซ็ปต์ครีเอทีฟ · Artwork · Caption / Ad Copy</div><div class="price">3,500.-</div></div>
 
-   <div class="breakrow"><strong>HAVE SOMETHING <em>IN MIND?</em></strong><a href="https://lin.ee/5E5Cibq" target="_blank">TELL US ABOUT IT <svg class="icon"><use href="#arrow"/></svg></a></div>
+   <div class="breakrow"><strong class="th"><span>มีโจทย์อื่นที่ไม่อยู่ในลิสต์?</span></strong><a class="th" href="https://lin.ee/5E5Cibq" target="_blank">เล่าโจทย์ให้เราฟัง <svg class="icon"><use href="#arrow"/></svg></a></div>
 
-   <div class="row"><div class="num">05</div><div class="name">Marketing Deck / Presentation</div><div class="desc">Structure · Story Flow · Content Refinement · Design · ~10 Slides</div><div class="price">1,500.-</div></div>
-   <div class="row"><div class="num">06</div><div class="name">Landing Page · Starter</div><div class="desc">Responsive Front-end · CTA · Form UI · Basic Animation</div><div class="price">3,500.-</div></div>
-   <div class="row"><div class="num">07</div><div class="name">Landing Page · Marketing</div><div class="desc">UX / Content Structure · Key Message · Copy · Marketing Flow</div><div class="price">5,000.-</div></div>
-   <div class="row"><div class="num">08</div><div class="name">Paid Ads Management</div><div class="desc">Setup · Audience · Monitoring · Optimization · Performance Summary</div><div class="price">6,000.-<small>PER MONTH · PLATFORM</small></div></div>
-   <div class="row"><div class="num">09</div><div class="name">Ads + Creative <span class="pill">BUNDLE</span></div><div class="desc">Paid Ads Management + Creative Package</div><div class="price">8,500.-<small>PER MONTH · PLATFORM</small></div></div>
+   <div class="row"><div class="num">05</div><div class="name th">ออกแบบ Marketing Deck / Presentation</div><div class="desc th">โครงเรื่อง · Story Flow · ปรับเนื้อหา · ออกแบบ · ประมาณ 10 Slides</div><div class="price">1,500.-</div></div>
+   <div class="row"><div class="num">06</div><div class="name th">Landing Page · Starter</div><div class="desc th">Responsive Front-end · CTA · Form UI · Basic Animation</div><div class="price">3,500.-</div></div>
+   <div class="row"><div class="num">07</div><div class="name th">Landing Page · Marketing</div><div class="desc th">UX / Content Structure · Key Message · Copy · Marketing Flow</div><div class="price">5,000.-</div></div>
+   <div class="row"><div class="num">08</div><div class="name th">ดูแล Paid Ads</div><div class="desc th">วางแคมเปญ · ตั้งกลุ่มเป้าหมาย · ดูแลและ Optimize · สรุป Performance</div><div class="price">6,000.-<small>PER MONTH · PLATFORM</small></div></div>
+   <div class="row"><div class="num">09</div><div class="name th">Paid Ads + Creative <span class="pill">BUNDLE</span></div><div class="desc th">ดูแล Paid Ads + Creative Package</div><div class="price">8,500.-<small>PER MONTH · PLATFORM</small></div></div>
 
-   <div class="breakrow"><strong>NEED <em>CREATIVE + ADS?</em></strong><a href="https://lin.ee/5E5Cibq" target="_blank">BUILD A MONTHLY PACKAGE <svg class="icon"><use href="#arrow"/></svg></a></div>
+   <div class="breakrow"><strong class="th"><span>อยากให้ช่วยทั้ง Creative + Ads?</span></strong><a class="th" href="https://lin.ee/5E5Cibq" target="_blank">คุยแพ็กเกจรายเดือน <svg class="icon"><use href="#arrow"/></svg></a></div>
 
-   <div class="row"><div class="num">10</div><div class="name">KOL / Influencer Campaign</div><div class="desc">Campaign Concept · KOL Criteria · Content Direction · Brief</div><div class="price">2,500.-</div></div>
-   <div class="row"><div class="num">11</div><div class="name">Event Marketing / MarCom</div><div class="desc">Event Concept · Communication Plan · Agenda / Flow · Content Direction</div><div class="price">3,500.-</div></div>
+   <div class="row"><div class="num">10</div><div class="name th">วางแผนแคมเปญ KOL / Influencer</div><div class="desc th">คอนเซ็ปต์แคมเปญ · KOL Criteria · ทิศทางคอนเทนต์ · บรีฟ</div><div class="price">2,500.-</div></div>
+   <div class="row"><div class="num">11</div><div class="name th">วางแผนการตลาดสำหรับอีเวนต์ / MarCom</div><div class="desc th">คอนเซ็ปต์อีเวนต์ · Communication Plan · Agenda / Flow · ทิศทางคอนเทนต์</div><div class="price">3,500.-</div></div>
   </div>
 
   <div class="info-grid">
@@ -562,13 +624,13 @@ img,svg{max-width:100%}
 
 <section class="final">
  <div class="wrap">
-  <div class="label">03 / START SOMETHING</div>
+  
   <h2>HAVE AN<br><em>IDEA?</em><br>LET'S MAKE<br>ANOTHER.</h2>
   <div class="final-bottom">
    <p class="th">ส่ง Brief หรือเล่าโจทย์คร่าว ๆ มาได้เลย<br>ประเมิน Scope · Timeline · ราคา ก่อนเริ่มงาน</p>
    <div class="actions">
-    <a class="button primary" href="https://lin.ee/5E5Cibq" target="_blank">START A PROJECT <svg class="icon"><use href="#arrow"/></svg></a>
-    <a class="button" href="https://lin.ee/5E5Cibq" target="_blank">CHAT ON LINE <svg class="icon"><use href="#arrow"/></svg></a>
+    <a class="button primary" href="https://lin.ee/5E5Cibq" target="_blank">คุยโปรเจกต์ <svg class="icon"><use href="#arrow"/></svg></a>
+    <a class="button" href="https://lin.ee/5E5Cibq" target="_blank">คุยทาง LINE <svg class="icon"><use href="#arrow"/></svg></a>
    </div>
   </div>
  </div>
