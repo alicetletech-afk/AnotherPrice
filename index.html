@@ -750,6 +750,46 @@ img,svg{max-width:100%}
 }
 </style>
 
+
+<style>
+/* V3.9 — slightly stronger visual mass, same balanced composition */
+@media(min-width:1024px){
+  .hero .wrap,
+  .final .wrap{
+    grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr) !important;
+    column-gap:5.5vw !important;
+  }
+
+  .hero h1{
+    font-size:clamp(4.9rem,6.15vw,6.95rem) !important;
+    max-width:710px !important;
+  }
+  .hero-bottom{max-width:500px}
+  .hero-copy{
+    max-width:490px !important;
+    font-size:1.1rem !important;
+  }
+  .hero .button{
+    padding:13px 17px !important;
+    font-size:.68rem;
+  }
+
+  .final h2{
+    font-size:clamp(5.15rem,6.55vw,7.35rem) !important;
+    max-width:730px !important;
+  }
+  .final-bottom{max-width:500px}
+  .final-bottom p{
+    max-width:490px !important;
+    font-size:1.05rem !important;
+  }
+  .final .button{
+    padding:13px 17px !important;
+    font-size:.68rem;
+  }
+}
+</style>
+
 </head>
 <body>
 
