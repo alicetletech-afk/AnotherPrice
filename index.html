@@ -3,894 +3,246 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ANOTHER — Marketing & Creative</title>
-<meta name="theme-color" content="#0d0d10">
+<title>ANOTHER — Services</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Noto+Serif+SC:wght@500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
- --ink:#101014; --muted:#6e6b75; --paper:#f4f1ea; --white:#fffdf9;
- --violet:#7057ff; --lav:#b7a7ff; --ice:#b9eaff; --peach:#ffb18f;
- --line:rgba(16,16,20,.12); --glass:rgba(255,255,255,.55);
- --r:22px;
+ --bone:#f4efe7;
+ --ink:#171515;
+ --muted:#776f69;
+ --line:rgba(23,21,21,.15);
+ --violet:#7658ff;
+ --red:#d71920;
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Poppins,Arial,sans-serif;overflow-x:hidden}
-.th{font-family:"IBM Plex Sans Thai","Tahoma",sans-serif}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1180px,calc(100% - 42px));margin:auto}
-svg{display:block}
-.icon{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.glass{background:linear-gradient(135deg,rgba(255,255,255,.74),rgba(255,255,255,.37));border:1px solid rgba(255,255,255,.78);box-shadow:0 16px 50px rgba(33,25,73,.08),inset 0 1px 0 rgba(255,255,255,.9);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-
-nav{position:sticky;top:14px;z-index:20;width:min(1180px,calc(100% - 42px));margin:14px auto 0;border-radius:18px;padding:11px 13px 11px 18px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:.9rem;font-weight:700;letter-spacing:.18em}
-.navmeta{font-size:.59rem;letter-spacing:.14em;color:#77727c;margin-left:auto;margin-right:18px}
-.button{display:inline-flex;gap:9px;align-items:center;border-radius:13px;padding:11px 14px;font-size:.66rem;font-weight:600;border:1px solid var(--line);transition:.2s;background:rgba(255,255,255,.42)}
-.button:hover{transform:translateY(-2px);border-color:rgba(112,87,255,.4)}
-.button.dark{background:var(--ink);color:white;border-color:var(--ink)}
-
-.hero{padding:96px 0 80px;position:relative}
-.hero:before{content:"";position:absolute;width:72vw;height:400px;left:12vw;top:-100px;background:radial-gradient(ellipse,rgba(112,87,255,.16),rgba(185,234,255,.12) 36%,rgba(255,177,143,.08) 55%,transparent 72%);filter:blur(30px);pointer-events:none}
-.eyebrow{display:flex;align-items:center;gap:11px;font-size:.62rem;letter-spacing:.17em;font-weight:600;color:var(--violet);position:relative}
-.eyebrow:before{content:"";width:28px;height:1px;background:currentColor}
-.hero h1{position:relative;margin:28px 0 34px;font-size:clamp(3.9rem,8.5vw,7.8rem);line-height:1.04;letter-spacing:-.045em;max-width:1060px}
-.hero h1 .light{font-weight:300}.hero h1 .strong{font-weight:600}.hero h1 em{font-family:Poppins,sans-serif;font-weight:300;font-style:italic}
-.accent{position:relative;display:inline-block}
-.accent:after{content:"";position:absolute;left:2%;right:0;height:10px;bottom:.04em;border-radius:999px;background:linear-gradient(90deg,var(--violet),var(--lav),var(--ice),var(--peach));opacity:.8;z-index:-1}
-.hero-bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end}
-.hero-copy{font-size:.96rem;line-height:1.9;color:#504d57;max-width:580px}
-.hero-copy strong{color:var(--ink);font-weight:600}
-.actions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap}
-
-.marquee-shell{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:rgba(255,255,255,.23)}
-.track{display:flex;width:max-content;animation:move 30s linear infinite;padding:13px 0}
-.track span{white-space:nowrap;font-size:.68rem;letter-spacing:.15em;font-weight:500;color:#4f4b56}
-.track i{font-style:normal;color:#a19ca8;margin:0 20px}
-@keyframes move{to{transform:translateX(-50%)}}
-
-.section{padding:100px 0}
-.section-grid{display:grid;grid-template-columns:240px 1fr;gap:70px}
-.label{font-size:.6rem;letter-spacing:.15em;color:var(--violet);font-weight:600}
-.intro h2,.price-head h2,.final h2{margin:0;letter-spacing:-.055em}
-.intro h2{font-size:clamp(3.2rem,6.5vw,6.4rem);line-height:.96;font-weight:600}
-.intro h2 em{font-weight:300}
-.intro p{font-size:.94rem;line-height:1.9;color:var(--muted);max-width:640px;margin:30px 0 18px}
-.textlink{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:600;border-bottom:1px solid var(--ink);padding-bottom:5px}
-
-.pricing{padding:95px 0;background:linear-gradient(180deg,#faf8f3 0%,#f2efe9 100%)}
-.price-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:34px}
-.price-head h2{font-size:clamp(3.4rem,7vw,6.8rem);line-height:.86;font-weight:600}
-.price-head h2 em{font-weight:300}
-.price-head p{font-size:.67rem;line-height:1.7;color:var(--muted);max-width:330px;text-align:right}
-.rate-card{border-radius:var(--r);overflow:hidden;background:rgba(255,255,255,.56);border:1px solid rgba(255,255,255,.9);box-shadow:0 24px 70px rgba(25,20,45,.08);backdrop-filter:blur(18px)}
-.table-head,.row{display:grid;grid-template-columns:55px 1.2fr 1.35fr .65fr;align-items:center}
-.table-head{padding:14px 22px;font-size:.53rem;letter-spacing:.15em;color:#89848e;border-bottom:1px solid var(--line)}
-.table-head div:last-child{text-align:right}
-.row{padding:18px 22px;border-bottom:1px solid var(--line);transition:.22s}
-.row:last-child{border:0}.row:hover{background:linear-gradient(90deg,rgba(112,87,255,.07),rgba(185,234,255,.09),rgba(255,177,143,.05))}
-.num{font-size:.57rem;color:#99949e}
-.name{font-size:.84rem;font-weight:600;padding-right:16px}
-.desc{font-size:.63rem;line-height:1.55;color:#77727e;padding-right:18px}
-.price{text-align:right;font-size:1rem;font-weight:700;letter-spacing:-.03em}
-.price small{font-size:.48rem;font-weight:400;color:#88838c;letter-spacing:0}
-.pill{font-size:.47rem;letter-spacing:.08em;border:1px solid rgba(112,87,255,.25);background:rgba(112,87,255,.08);color:#5b42dc;border-radius:999px;padding:4px 7px;margin-left:6px;vertical-align:2px}
-.breakrow{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:19px 22px;background:linear-gradient(110deg,#111115,#211b37);color:white;border-bottom:1px solid rgba(255,255,255,.09)}
-.breakrow strong{font-size:.82rem;font-weight:500}.breakrow em{font-weight:300}
-.breakrow a{display:inline-flex;align-items:center;gap:7px;font-size:.59rem;color:#ded9e9}
-
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-.info{border-radius:18px;padding:22px}
-.info-top{display:flex;justify-content:space-between;align-items:center;color:var(--violet)}
-.info .small{font-size:.52rem;letter-spacing:.13em;font-weight:600}
-.info h3{font-size:.82rem;margin:20px 0 8px}.info p{font-size:.62rem;line-height:1.7;color:var(--muted);margin:0}
-
-.final{background:#0d0d10;color:white;padding:115px 0 60px;position:relative;overflow:hidden}
-.final:before{content:"";position:absolute;inset:auto -15% -75% 25%;height:620px;background:radial-gradient(ellipse,rgba(112,87,255,.28),rgba(185,234,255,.12) 35%,rgba(255,177,143,.10) 52%,transparent 70%);filter:blur(35px)}
-.final .wrap{position:relative}
-.final .label{color:#aa99ff}
-.final h2{font-size:clamp(4.5rem,11vw,10rem);line-height:.82;font-weight:600;margin:24px 0 44px}
-.final h2 em{font-weight:300;color:#c5baff}
-.final-bottom{display:flex;justify-content:space-between;align-items:end;gap:35px}
-.final p{font-size:.86rem;line-height:1.8;color:#aaa6b0;max-width:520px;margin:0}
-.final .button{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:white}
-.final .button.primary{background:white;color:#111;border-color:white}
-
-footer{background:#0d0d10;color:#88848d;border-top:1px solid rgba(255,255,255,.1);padding:32px 0 42px}
-.foot{display:grid;grid-template-columns:1.4fr .6fr;gap:40px;font-size:.58rem;line-height:1.8}.foot strong{color:#c9c5ce;font-weight:500}.foot div:last-child{text-align:right}
-
-@media(max-width:820px){
- .wrap,nav{width:calc(100% - 28px)}
- .navmeta{display:none}
- .hero{padding:75px 0 65px}
- .hero-bottom{grid-template-columns:1fr;gap:28px}.actions{justify-content:flex-start}
- .section-grid{grid-template-columns:1fr;gap:24px}.section{padding:75px 0}
- .price-head{display:block}.price-head p{text-align:left;margin-top:22px}
- .table-head{display:none}
- .row{grid-template-columns:34px 1fr auto}
- .row .desc{grid-column:2/4;margin-top:6px}
- .info-grid{grid-template-columns:1fr}
- .final-bottom{display:block}.final .actions{margin-top:28px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:Poppins,"IBM Plex Sans Thai",sans-serif}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1260px,calc(100% - 72px));margin:auto}
+nav{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font-size:.84rem;font-weight:600;letter-spacing:.18em}
+.nav-meta{font-size:.64rem;letter-spacing:.14em;color:var(--muted)}
+.hero{position:relative;min-height:610px;padding:68px 0 48px;overflow:hidden}
+.hero:before{
+ content:"ANOTHER";position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);
+ font-size:clamp(10rem,23vw,22rem);font-weight:600;letter-spacing:-.08em;line-height:.75;
+ color:transparent;-webkit-text-stroke:1px rgba(23,21,21,.065);white-space:nowrap;pointer-events:none
 }
-@media(max-width:520px){
- nav{top:8px;margin-top:8px;border-radius:15px;padding-left:14px}
- .logo{font-size:.76rem}.button{padding:10px 12px}
- .hero h1{font-size:14.2vw;line-height:1.08;letter-spacing:-.035em;margin:24px 0 30px}.hero-copy{font-size:.87rem;line-height:1.85}
- .hero:before{width:120vw;left:-10vw}
- .pricing{padding:70px 0}
- .price-head h2{font-size:16vw}
- .rate-card{border-radius:18px}
- .row{padding:17px 13px;grid-template-columns:30px 1fr}
- .row .price{grid-column:2;text-align:left;margin-top:9px;color:#6048e5}
- .row .desc{grid-column:2;margin-top:5px;padding:0}
- .name{padding:0}
- .breakrow{align-items:flex-start;flex-direction:column;padding:19px 15px}
- .final{padding-top:85px}.final h2{font-size:19vw}
- .final .actions{flex-direction:column;align-items:stretch}.final .button{justify-content:center}
- .foot{grid-template-columns:1fr}.foot div:last-child{text-align:left}
+.hero:after{
+ content:"";position:absolute;left:50%;bottom:0;width:1px;height:82px;
+ background:linear-gradient(to bottom,rgba(23,21,21,.28),transparent)
 }
-@media(prefers-reduced-motion:reduce){.track{animation:none}html{scroll-behavior:auto}}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:13px;font-size:.62rem;letter-spacing:.16em;color:var(--muted);margin-bottom:48px}
+.eyebrow:before{content:"";width:34px;height:1px;background:var(--ink)}
+.hero-row{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(300px,.78fr);gap:6vw;align-items:center}
+.hero-title{position:relative}
+h1{font-family:"IBM Plex Sans Thai",sans-serif;font-size:clamp(4.1rem,7vw,7.9rem);line-height:.91;letter-spacing:-.06em;font-weight:300;margin:0}
+h1 strong{
+ display:block;width:max-content;max-width:100%;
+ font-family:Poppins,sans-serif;font-size:1.08em;font-weight:500;font-style:italic;
+ letter-spacing:-.07em;line-height:.88;margin:.08em 0;
+ background:linear-gradient(100deg,var(--ink) 12%,#5f4ee0 46%,#b74a50 62%,var(--ink) 88%);
+ background-size:230% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+ animation:brandShift 18s ease-in-out infinite
+}
+@keyframes brandShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-side{justify-self:end;width:min(100%,430px)}
+.hero-copy{font-family:"IBM Plex Sans Thai",sans-serif;font-size:.98rem;line-height:1.85;color:var(--muted);max-width:420px;margin:0 0 32px}
+.micro-paths{border-top:1px solid var(--line)}
+.micro{display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);font-size:.63rem;letter-spacing:.1em}
+.micro .n{color:var(--muted);font-size:.55rem}
+.micro .signal{width:42px;height:2px;border-radius:99px;position:relative;overflow:hidden;background:rgba(23,21,21,.08)}
+.micro .signal:after{content:"";position:absolute;inset:0;transform:translateX(-100%);animation:signal 4.8s ease-in-out infinite}
+.micro.v .signal:after{background:var(--violet)}
+.micro.r .signal:after{background:var(--red);animation-delay:1.2s}
+@keyframes signal{0%,25%{transform:translateX(-100%)}55%,70%{transform:translateX(0)}100%{transform:translateX(100%)}}
+.hero-route{display:grid;grid-template-columns:1fr 1fr;width:min(500px,44vw);margin:48px auto 0;position:relative}
+.hero-route:before{content:"";position:absolute;left:50%;top:-28px;width:1px;height:28px;background:var(--line)}
+.route-arm{height:28px;border-top:1px solid var(--line)}
+.route-arm:first-child{border-right:1px solid var(--line);border-radius:0 12px 0 0}
+.route-arm:last-child{border-left:0;border-radius:12px 0 0 0}
+.route-dot{position:absolute;top:24px;width:7px;height:7px;border-radius:50%}
+.route-dot.v{left:0;background:var(--violet);box-shadow:0 0 0 6px rgba(118,88,255,.08)}
+.route-dot.r{right:0;background:var(--red);box-shadow:0 0 0 6px rgba(215,25,32,.07)}
+.choose{padding:20px 0 95px}
+.choose-label{display:flex;align-items:center;gap:14px;font-size:.62rem;letter-spacing:.15em;color:var(--muted);margin-bottom:13px}
+.choose-label:after{content:"";height:1px;background:var(--line);flex:1}
+.panels{display:grid;grid-template-columns:1fr 1fr;min-height:500px;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:rgba(255,255,255,.12)}
+.panel{position:relative;padding:42px 44px 38px;display:flex;flex-direction:column;overflow:hidden;isolation:isolate;transition:color .45s ease,background .45s ease}
+.panel:first-child{border-right:1px solid var(--line)}
+.panel:before{content:"";position:absolute;inset:0;z-index:-2;opacity:0;transition:opacity .45s ease}
+.marketing:before{background:
+ radial-gradient(circle at 80% 20%,rgba(255,255,255,.26),transparent 23%),
+ linear-gradient(135deg,#171515 0%,#251d43 52%,#7658ff 150%)}
+.china:before{background:
+ radial-gradient(circle at 82% 17%,rgba(255,226,160,.24),transparent 22%),
+ linear-gradient(135deg,#fff7ec 0%,#f5e6d8 45%,#d71920 150%)}
+.panel:hover:before{opacity:1}
+.marketing:hover{color:#fff}
+.china:hover{color:#4b0d0d}
+.panel-no{font-size:.6rem;letter-spacing:.14em;opacity:.55}
+.panel-title{margin-top:66px;font-size:clamp(2.7rem,4.2vw,5rem);line-height:.91;letter-spacing:-.055em;font-weight:500}
+.panel-title em{font-weight:300}
+.panel-desc{font-family:"IBM Plex Sans Thai",sans-serif;max-width:430px;font-size:.88rem;line-height:1.8;color:var(--muted);margin-top:27px;transition:color .4s}
+.marketing:hover .panel-desc{color:#cfc8dc}
+.china:hover .panel-desc{color:#7b3935}
+.services{margin-top:auto;padding-top:42px;display:flex;flex-wrap:wrap;gap:7px}
+.services span{font-size:.58rem;letter-spacing:.07em;border:1px solid currentColor;border-radius:999px;padding:6px 9px;opacity:.58}
+.explore{margin-top:28px;display:flex;align-items:center;justify-content:space-between;padding-top:19px;border-top:1px solid currentColor;font-size:.65rem;letter-spacing:.11em;font-weight:600}
+.arrow{font-size:1.2rem;transition:transform .35s}
+.panel:hover .arrow{transform:translateX(7px)}
+.watermark{position:absolute;right:-10px;top:5px;font-size:10rem;line-height:1;font-weight:600;opacity:.035;z-index:-1;transition:opacity .45s,transform .55s}
+.marketing .watermark{font-style:italic}
+.china .watermark{font-family:"Noto Serif SC",serif;color:var(--red)}
+.panel:hover .watermark{opacity:.12;transform:translate(-12px,10px)}
+.bridge{padding:88px 0 100px;border-top:1px solid var(--line)}
+.bridge-grid{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}
+.bridge h2{font-size:clamp(2.6rem,4.5vw,5rem);line-height:.95;letter-spacing:-.05em;margin:0;font-weight:500}
+.bridge h2 em{font-weight:300}
+.bridge-right{justify-self:end;max-width:450px}
+.bridge-right p{font-family:"IBM Plex Sans Thai",sans-serif;color:var(--muted);line-height:1.85;margin:0 0 24px}
+.line-btn{display:inline-flex;align-items:center;gap:13px;font-size:.66rem;font-weight:600;letter-spacing:.1em;border-bottom:1px solid var(--ink);padding-bottom:7px}
+footer{border-top:1px solid var(--line);padding:24px 0 28px;font-size:.6rem;letter-spacing:.11em;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between}
+@media(max-width:760px){
+ .wrap{width:min(100% - 32px,1260px)}
+ nav{height:64px}
+ .hero{padding:60px 0 45px}
+ .hero-row{grid-template-columns:1fr;gap:28px}
+ h1{font-size:clamp(3.35rem,15vw,5.1rem)}
+ .hero-copy{justify-self:start}
+ .choose{padding-bottom:70px}
+ .panels{grid-template-columns:1fr;min-height:0;border-radius:22px}
+ .panel{min-height:440px;padding:31px 27px}
+ .panel:first-child{border-right:0;border-bottom:1px solid var(--line)}
+ .panel-title{margin-top:48px;font-size:3.25rem}
+ .watermark{font-size:7rem}
+ .bridge{padding:70px 0}
+ .bridge-grid{grid-template-columns:1fr;gap:35px}
+ .bridge-right{justify-self:start}
+ footer .wrap{flex-direction:column;gap:9px}
+}
+@media(hover:none){
+ .panel:active:before{opacity:1}
+}
 </style>
 
 <style>
-/* V3.2 — mobile geometry pass */
-html,body{width:100%;max-width:100%;overflow-x:clip}
-body>*{max-width:100%}
-img,svg{max-width:100%}
+@media(max-width:760px){
+ .hero{min-height:auto;padding:54px 0 34px}
+ .hero:before{font-size:34vw;top:43%}
+ .hero:after{height:46px}
+ .hero .eyebrow{margin-bottom:34px}
+ .hero-row{grid-template-columns:1fr;gap:38px}
+ h1{font-size:clamp(3.6rem,16vw,5.3rem)}
+ h1 strong{font-size:1.03em}
+ .hero-side{justify-self:start;width:100%}
+ .hero-copy{margin-bottom:24px}
+ .hero-route{width:68vw;margin-top:38px}
+}
+@media(prefers-reduced-motion:reduce){
+ h1 strong,.micro .signal:after{animation:none}
+}
+</style>
 
-@media(max-width:520px){
-  :root{--mobile-gutter:20px}
 
-  .wrap{
-    width:auto !important;
-    max-width:none !important;
-    margin-left:var(--mobile-gutter) !important;
-    margin-right:var(--mobile-gutter) !important;
-  }
-
-  nav{
-    width:auto !important;
-    left:auto !important;
-    right:auto !important;
-    margin:8px var(--mobile-gutter) 0 !important;
-    padding:9px 10px 9px 14px !important;
-    min-height:62px;
-    border-radius:18px;
-  }
-  .logo{font-size:.72rem;letter-spacing:.17em}
-  nav .button{padding:10px 12px;font-size:.58rem;border-radius:12px}
-  nav .icon{width:15px;height:15px}
-
+<style>
+/* V4 — remove dead space between hero and service panels */
+@media(min-width:761px){
   .hero{
-    width:100%;
-    padding:64px 0 58px;
-    overflow:hidden;
+    min-height:0 !important;
+    padding:68px 0 12px !important;
   }
-  .hero:before{
-    width:110vw;
-    max-width:none;
-    height:330px;
-    left:-5vw;
-    top:-80px;
+  .hero-route{
+    margin-top:34px !important;
   }
-  .eyebrow{font-size:.54rem;letter-spacing:.14em;gap:9px}
-  .eyebrow:before{width:22px}
-
-  .hero h1{
-    width:100%;
-    max-width:100%;
-    font-size:clamp(3rem,13.2vw,4.15rem) !important;
-    line-height:1.1 !important;
-    letter-spacing:-.035em !important;
-    margin:23px 0 27px !important;
-    overflow-wrap:normal;
-    word-break:keep-all;
+  .hero:after{
+    display:none !important;
   }
-  .accent:after{height:6px;bottom:.03em}
-  .hero-bottom{gap:23px}
-  .hero-copy{max-width:100%;font-size:.84rem;line-height:1.8}
-  .hero .actions{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}
-  .hero .button{width:100%;padding:11px 9px;font-size:.56rem;white-space:nowrap}
-
-  .marquee-shell{width:100%;overflow:hidden}
-  .track{max-width:none}
-
-  .section{padding:68px 0}
-  .section-grid{gap:22px}
-  .intro h2{
-    font-size:clamp(2.85rem,13vw,4rem);
-    line-height:.98;
-  }
-  .intro p{font-size:.84rem;line-height:1.8}
-
-  .pricing{
-    width:100%;
-    padding:68px 0 74px;
-    overflow:hidden;
-  }
-  .price-head{margin-bottom:28px}
-  .price-head h2{
-    font-size:clamp(3rem,13.5vw,4.2rem) !important;
-    line-height:.93 !important;
-    letter-spacing:-.05em;
-    max-width:100%;
-  }
-  .price-head p{font-size:.64rem;line-height:1.65;margin-top:19px}
-
-  .rate-card{
-    width:100%;
-    max-width:100%;
-    border-radius:18px;
-    overflow:hidden;
-  }
-  .row{
-    width:100%;
-    grid-template-columns:30px minmax(0,1fr) !important;
-    padding:17px 14px !important;
-  }
-  .row>*{min-width:0}
-  .name{font-size:.76rem;line-height:1.45}
-  .desc{
-    grid-column:2 !important;
-    font-size:.59rem;
-    line-height:1.6;
-    overflow-wrap:anywhere;
-  }
-  .price{
-    grid-column:2 !important;
-    text-align:left !important;
-    font-size:1rem;
-    margin-top:8px;
-  }
-  .breakrow{
-    width:100%;
-    padding:18px 15px;
-    gap:11px;
-  }
-  .breakrow strong{font-size:.72rem}
-  .breakrow a{font-size:.53rem}
-
-  .info-grid{gap:10px}
-  .info{padding:19px;border-radius:17px}
-
-  .final{
-    width:100%;
-    max-width:100%;
-    overflow:hidden;
-    padding:78px 0 52px;
-  }
-  .final:before{
-    inset:auto -30% -25% 0;
-    width:130%;
-    max-width:none;
-    height:400px;
-  }
-  .final h2{
-    width:100%;
-    max-width:100%;
-    font-size:clamp(3.2rem,14vw,4.45rem) !important;
-    line-height:.88 !important;
-    letter-spacing:-.055em;
-    margin:22px 0 34px;
-    overflow-wrap:normal;
-    word-break:normal;
-  }
-  .final p{font-size:.78rem;line-height:1.75}
-  .final .actions{
-    display:grid;
-    grid-template-columns:1fr;
-    width:100%;
-    gap:8px;
-    margin-top:25px;
-  }
-  .final .button{
-    width:100%;
-    min-width:0;
-    justify-content:center;
-    padding:13px 12px;
-    border-radius:15px;
-    font-size:.62rem;
-  }
-
-  footer{
-    width:100%;
-    overflow:hidden;
-    padding:28px 0 36px;
-  }
-  .foot{
-    width:auto;
-    grid-template-columns:1fr;
-    gap:22px;
-    font-size:.53rem;
-    overflow-wrap:anywhere;
+  .choose{
+    padding-top:22px !important;
   }
 }
-</style>
-
-
-<style>
-/* V3.4 — desktop composition pass. Mobile/tablet rules remain untouched. */
-@media(min-width:1024px){
-  .wrap{width:min(1340px,calc(100% - 96px))}
-  nav{width:min(1340px,calc(100% - 96px))}
-
-  /* HERO: intentional 60/40 composition */
+@media(max-width:760px){
   .hero{
-    min-height:720px;
-    padding:90px 0 82px;
-    display:flex;
-    align-items:center;
+    min-height:0 !important;
+    padding-bottom:12px !important;
   }
-  .hero .wrap{
-    display:grid;
-    grid-template-columns:minmax(0,1.45fr) minmax(330px,.55fr);
-    column-gap:7vw;
-    align-items:end;
+  .hero:after{
+    display:none !important;
   }
-  .hero .eyebrow{grid-column:1}
-  .hero h1{
-    grid-column:1;
-    font-size:clamp(5.2rem,7.2vw,8rem);
-    max-width:900px;
-    margin:26px 0 0;
+  .hero-route{
+    margin-top:30px !important;
   }
-  .hero-bottom{
-    grid-column:2;
-    grid-row:1 / span 2;
-    display:flex;
-    flex-direction:column;
-    align-self:end;
-    gap:28px;
-    padding-bottom:18px;
-  }
-  .hero-copy{max-width:430px;font-size:1rem}
-  .hero .actions{justify-content:flex-start}
-
-  /* WHAT WE DO: balanced 40/60 editorial grid */
-  .section.intro{padding:92px 0 100px}
-  .intro .section-grid{
-    grid-template-columns:minmax(230px,.42fr) minmax(0,.58fr);
-    gap:7vw;
-    align-items:start;
-  }
-  .intro .label{padding-top:11px}
-  .intro h2{
-    font-size:clamp(4.5rem,5.8vw,6.7rem);
-    max-width:850px;
-  }
-  .intro p{max-width:690px;margin-top:26px}
-
-  /* PRICING: larger and more coherent with its heading */
-  .pricing{padding:88px 0 96px}
-  .price-head{
-    display:grid;
-    grid-template-columns:minmax(0,2fr) minmax(300px,.7fr);
-    gap:70px;
-    align-items:end;
-    margin-bottom:40px;
-  }
-  .price-head h2{
-    font-size:clamp(4.8rem,6.2vw,7rem);
-    max-width:920px;
-  }
-  .price-head p{
-    max-width:390px;
-    justify-self:end;
-    font-size:.72rem;
-    line-height:1.8;
-  }
-  .table-head,.row{
-    grid-template-columns:60px 1.2fr 1.55fr .6fr;
-  }
-  .table-head{padding:16px 26px}
-  .row{padding:20px 26px}
-  .name{font-size:.88rem}
-  .desc{font-size:.66rem}
-  .price{font-size:1.08rem}
-  .breakrow{padding:20px 26px}
-  .info{min-height:150px}
-
-  /* FINAL: use the right side instead of leaving a void */
-  .final{
-    min-height:700px;
-    padding:92px 0 64px;
-    display:flex;
-    align-items:center;
-  }
-  .final .wrap{
-    display:grid;
-    grid-template-columns:minmax(0,1.35fr) minmax(340px,.65fr);
-    column-gap:7vw;
-    align-items:end;
-  }
-  .final .label{grid-column:1}
-  .final h2{
-    grid-column:1;
-    font-size:clamp(5.5rem,7.7vw,8.6rem);
-    max-width:900px;
-    margin:25px 0 0;
-  }
-  .final-bottom{
-    grid-column:2;
-    grid-row:1 / span 2;
-    align-self:end;
-    display:block;
-    padding:30px;
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:22px;
-    background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
-    box-shadow:0 24px 70px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.12);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-  }
-  .final-bottom p{font-size:.9rem;max-width:430px}
-  .final .actions{
-    margin-top:28px;
-    justify-content:flex-start;
-  }
-  .final .button{padding:12px 14px}
-
-  footer .wrap{width:min(1340px,calc(100% - 96px))}
-}
-
-@media(min-width:1440px){
-  .hero{min-height:760px}
-  .section.intro{padding-top:105px;padding-bottom:110px}
-  .final{min-height:760px}
-}
-</style>
-
-
-<style>
-/* V3.5 — balanced price hierarchy */
-.price{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  justify-content:center;
-  gap:3px;
-  line-height:1.05;
-  min-height:38px;
-}
-.price small{
-  display:block;
-  margin:0;
-  font-size:.45rem;
-  line-height:1.2;
-  font-weight:400;
-  letter-spacing:.08em;
-  color:#8a8590;
-  white-space:nowrap;
-}
-@media(max-width:820px){
-  .price{
-    align-items:flex-start;
-    text-align:left !important;
-    gap:4px;
-    min-height:0;
-  }
-  .price small{font-size:.43rem}
-}
-</style>
-
-
-<style>
-/* V3.6 — simplified flow + Thai-forward service language */
-.bridge{
-  padding:92px 0 98px;
-  text-align:center;
-}
-.bridge-inner{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-.bridge h2{
-  max-width:980px;
-  font-size:clamp(4rem,7vw,7rem);
-  line-height:.92;
-  margin:0;
-}
-.bridge p{
-  max-width:690px;
-  margin:30px auto 17px;
-  font-size:.92rem;
-  line-height:1.9;
-  color:var(--muted);
-}
-.bridge .textlink{margin-top:3px}
-.thai-lead{
-  font-size:.72rem;
-  font-weight:500;
-  color:var(--violet);
-  margin-bottom:14px;
-}
-.breakrow .th{font-family:"IBM Plex Sans Thai","Tahoma",sans-serif}
-.breakrow strong.th{font-size:.82rem;font-weight:500}
-.breakrow a.th{font-size:.64rem}
-.name.th{font-weight:600}
-.desc.th{font-weight:400}
-
-@media(min-width:1024px){
-  /* compact the upper page now that the bridge owns the transition */
-  .hero{min-height:620px;padding:72px 0 66px}
-  .hero .wrap{
-    grid-template-columns:minmax(0,1.35fr) minmax(350px,.65fr);
-    column-gap:5.5vw;
-  }
-  .hero h1{font-size:clamp(5rem,6.7vw,7.5rem)}
-  .hero-bottom{padding-bottom:10px}
-  .bridge{padding:86px 0 92px}
-  .pricing{padding-top:78px}
-}
-@media(max-width:820px){
-  .bridge{padding:70px 0 72px}
-  .bridge h2{font-size:clamp(3rem,13vw,4.5rem)}
-  .bridge p{font-size:.84rem}
-  .thai-lead{font-size:.66rem;margin-bottom:11px}
-}
-@media(max-width:520px){
-  .bridge{padding:62px 0 66px}
-  .bridge h2{font-size:13.2vw;line-height:.96}
-  .bridge p{margin-top:24px}
-  .breakrow strong.th{font-size:.72rem}
-  .breakrow a.th{font-size:.57rem}
-}
-</style>
-
-
-<style>
-/* V3.7 — manifesto becomes a transition, not a second hero */
-.bridge{
-  min-height:0 !important;
-  padding:64px 0 68px !important;
-  border-bottom:1px solid var(--line);
-}
-.bridge-inner{
-  max-width:1340px;
-}
-.bridge h2{
-  max-width:none !important;
-  margin:0 !important;
-  font-size:clamp(2rem,2.8vw,2.7rem) !important;
-  line-height:1.15 !important;
-  letter-spacing:-.035em !important;
-  white-space:nowrap;
-  font-weight:600;
-}
-.bridge h2 br{display:none}
-.bridge h2 em{font-weight:300;font-style:italic}
-.bridge h2 .accent:after{
-  height:4px;
-  bottom:-.08em;
-}
-.bridge p{
-  max-width:650px !important;
-  margin:18px auto 0 !important;
-  font-size:.78rem !important;
-  line-height:1.75 !important;
-}
-.bridge .textlink{display:none !important}
-
-/* Pricing should clearly outrank the transition */
-.pricing{padding-top:88px !important}
-.price-head h2{
-  font-size:clamp(5rem,6.5vw,7.3rem) !important;
-  line-height:.87 !important;
-}
-.thai-lead{
-  margin-bottom:12px;
-  font-size:.7rem;
-}
-
-@media(max-width:820px){
-  .bridge{
-    padding:50px 0 54px !important;
-  }
-  .bridge h2{
-    font-size:clamp(1.75rem,6.5vw,2.5rem) !important;
-    white-space:normal;
-    line-height:1.13 !important;
-  }
-  .bridge h2 br{display:none}
-  .bridge p{
-    max-width:520px !important;
-    font-size:.76rem !important;
-    margin-top:15px !important;
-  }
-  .pricing{padding-top:68px !important}
-  .price-head h2{
-    font-size:clamp(3rem,13.5vw,4.2rem) !important;
-  }
-}
-@media(max-width:520px){
-  .bridge{
-    padding:42px 0 46px !important;
-  }
-  .bridge h2{
-    font-size:clamp(1.65rem,7.5vw,2.15rem) !important;
-    line-height:1.14 !important;
-  }
-  .bridge p{
-    font-size:.72rem !important;
-    line-height:1.7 !important;
-  }
-}
-</style>
-
-
-<style>
-/* V3.8 — centered 55/45 visual balance for hero + closing CTA */
-@media(min-width:1024px){
-
-  /* HERO */
-  .hero{
-    min-height:610px !important;
-    padding:74px 0 72px !important;
-    display:flex;
-    align-items:center;
-  }
-  .hero .wrap{
-    width:min(1180px,calc(100% - 110px)) !important;
-    display:grid !important;
-    grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr) !important;
-    column-gap:7vw !important;
-    align-items:center !important;
-  }
-  .hero .eyebrow{
-    grid-column:1 !important;
-    grid-row:1 !important;
-    align-self:end;
-    margin-bottom:24px;
-  }
-  .hero h1{
-    grid-column:1 !important;
-    grid-row:2 !important;
-    align-self:start;
-    font-size:clamp(4.5rem,5.6vw,6.35rem) !important;
-    line-height:1.04 !important;
-    max-width:660px !important;
-    margin:0 !important;
-  }
-  .hero-bottom{
-    grid-column:2 !important;
-    grid-row:1 / span 2 !important;
-    align-self:center !important;
-    display:flex !important;
-    flex-direction:column;
-    justify-content:center;
-    gap:25px !important;
-    padding:0 !important;
-    max-width:480px;
-  }
-  .hero-copy{
-    max-width:470px !important;
-    font-size:1.05rem !important;
-    line-height:1.95 !important;
-  }
-  .hero .actions{
-    justify-content:flex-start !important;
-    gap:10px;
-  }
-  .hero .button{
-    padding:12px 16px;
-  }
-
-  /* CLOSING CTA */
-  .final{
-    min-height:590px !important;
-    padding:76px 0 !important;
-    display:flex;
-    align-items:center;
-  }
-  .final .wrap{
-    width:min(1180px,calc(100% - 110px)) !important;
-    display:grid !important;
-    grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr) !important;
-    column-gap:7vw !important;
-    align-items:center !important;
-  }
-  .final h2{
-    grid-column:1 !important;
-    grid-row:1 !important;
-    align-self:center;
-    max-width:670px !important;
-    margin:0 !important;
-    font-size:clamp(4.6rem,5.8vw,6.6rem) !important;
-    line-height:.91 !important;
-  }
-  .final-bottom{
-    grid-column:2 !important;
-    grid-row:1 !important;
-    align-self:center !important;
-    display:flex !important;
-    flex-direction:column;
-    justify-content:center;
-    max-width:480px;
-    padding:0 !important;
-    border:0 !important;
-    border-radius:0 !important;
-    background:none !important;
-    box-shadow:none !important;
-    backdrop-filter:none !important;
-    -webkit-backdrop-filter:none !important;
-  }
-  .final-bottom:before{
-    content:"";
-    display:block;
-    width:54px;
-    height:1px;
-    margin-bottom:25px;
-    background:linear-gradient(90deg,#9b84ff,#c3b7ff);
-  }
-  .final-bottom p{
-    max-width:470px !important;
-    font-size:1rem !important;
-    line-height:1.9 !important;
-    color:#bbb7c2;
-  }
-  .final .actions{
-    justify-content:flex-start !important;
-    margin-top:26px !important;
-    gap:10px;
-  }
-  .final .button{
-    padding:12px 16px !important;
-  }
-}
-
-/* On very wide screens keep both compositions in the visual middle,
-   rather than stretching them toward the viewport edges. */
-@media(min-width:1500px){
-  .hero .wrap,.final .wrap{
-    width:min(1240px,calc(100% - 140px)) !important;
-  }
-}
-</style>
-
-
-<style>
-/* V3.9 — slightly stronger visual mass, same balanced composition */
-@media(min-width:1024px){
-  .hero .wrap,
-  .final .wrap{
-    grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr) !important;
-    column-gap:5.5vw !important;
-  }
-
-  .hero h1{
-    font-size:clamp(4.9rem,6.15vw,6.95rem) !important;
-    max-width:710px !important;
-  }
-  .hero-bottom{max-width:500px}
-  .hero-copy{
-    max-width:490px !important;
-    font-size:1.1rem !important;
-  }
-  .hero .button{
-    padding:13px 17px !important;
-    font-size:.68rem;
-  }
-
-  .final h2{
-    font-size:clamp(5.15rem,6.55vw,7.35rem) !important;
-    max-width:730px !important;
-  }
-  .final-bottom{max-width:500px}
-  .final-bottom p{
-    max-width:490px !important;
-    font-size:1.05rem !important;
-  }
-  .final .button{
-    padding:13px 17px !important;
-    font-size:.68rem;
+  .choose{
+    padding-top:20px !important;
   }
 }
 </style>
 
 </head>
 <body>
-
-<svg width="0" height="0" style="position:absolute">
-<symbol id="arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
-<symbol id="down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
-<symbol id="pen" viewBox="0 0 24 24"><path d="m4 20 4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10L4 20Z"/><path d="m14 7 3 3"/></symbol>
-<symbol id="chart" viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3"/></symbol>
-<symbol id="layout" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></symbol>
-</svg>
-
-<nav class="glass">
- <a class="logo" href="#top">ANOTHER</a>
- <span class="navmeta">MARKETING / CREATIVE / DIGITAL</span>
- <a class="button dark" href="https://lin.ee/5E5Cibq" target="_blank">คุยกับเรา <svg class="icon"><use href="#arrow"/></svg></a>
-</nav>
-
-<header class="hero" id="top">
- <div class="wrap">
-  <div class="eyebrow">MARKETING & CREATIVE STUDIO</div>
-  <h1 class="th"><span class="light">มีไอเดีย</span><br><span class="strong">แต่ไม่รู้จะ</span><br><span class="strong accent">เริ่มตรงไหน?</span></h1>
-  <div class="hero-bottom">
-   <div class="hero-copy th">ช่วยเปลี่ยนไอเดียให้เป็น <strong>แผน · คอนเทนต์ · ครีเอทีฟ</strong> และงานที่พร้อมใช้งานจริง ตั้งแต่คิด Direction ไปจนถึง Execution</div>
-   <div class="actions">
-    <a class="button dark" href="https://lin.ee/5E5Cibq" target="_blank">คุยโปรเจกต์ <svg class="icon"><use href="#arrow"/></svg></a>
-    <a class="button" href="#services">ดูบริการ <svg class="icon"><use href="#down"/></svg></a>
-   </div>
-  </div>
- </div>
+<header class="wrap">
+ <nav><a class="logo" href="index.html">ANOTHER</a><span class="nav-meta">SERVICES / PRICING</span></nav>
 </header>
 
-<div class="marquee-shell">
- <div class="track">
-  <span>STRATEGY <i>/</i> CONTENT <i>/</i> CREATIVE <i>/</i> MARCOM <i>/</i> WEB <i>/</i> MEDIA <i>/</i>&nbsp;</span>
-  <span>STRATEGY <i>/</i> CONTENT <i>/</i> CREATIVE <i>/</i> MARCOM <i>/</i> WEB <i>/</i> MEDIA <i>/</i>&nbsp;</span>
- </div>
-</div>
-
-<section class="section intro bridge">
- <div class="wrap bridge-inner">
-   <h2>FROM <em>IDEA</em><br>TO SOMETHING<br>THAT <span class="accent">WORKS.</span></h2>
-   <p class="th">ไม่จำเป็นต้องเริ่มด้วยบรีฟที่สมบูรณ์ เล่าโจทย์ เป้าหมาย หรือสิ่งที่กำลังติดอยู่มาได้ แล้วค่อยเลือก Scope ที่เหมาะกับโปรเจกต์</p>
-   <a class="textlink th" href="https://lin.ee/5E5Cibq" target="_blank">ยังไม่แน่ใจว่าจะเริ่มตรงไหน? คุยกับเราก่อนได้ <svg class="icon"><use href="#arrow"/></svg></a>
- </div>
-</section>
-
-<section class="pricing" id="services">
+<section class="hero">
  <div class="wrap">
-  <div class="price-head">
-   <div><div class="thai-lead th">เลือกเฉพาะสิ่งที่โปรเจกต์ต้องการ</div><h2>CHOOSE<br><em>WHAT YOU NEED.</em></h2></div>
-   <p class="th">ราคาเริ่มต้น Final quotation ประเมินตาม Scope, Requirement และความซับซ้อนของแต่ละโปรเจกต์</p>
-  </div>
-
-  <div class="rate-card">
-   <div class="table-head"><div>NO.</div><div>SERVICE</div><div>WHAT'S INCLUDED</div><div>STARTING FROM</div></div>
-   <div class="row"><div class="num">01</div><div class="name th">วางแผนการตลาดและแคมเปญ</div><div class="desc th">วิเคราะห์โจทย์ · คอนเซ็ปต์แคมเปญ · Key Message · ช่องทางและทิศทางคอนเทนต์</div><div class="price">2,500.-</div></div>
-   <div class="row"><div class="num">02</div><div class="name th">วางแผนคอนเทนต์และปฏิทิน</div><div class="desc th">Content Pillars · ไอเดียคอนเทนต์ 10–15 หัวข้อ · ปฏิทิน · Tone & Direction</div><div class="price">1,500.-</div></div>
-   <div class="row"><div class="num">03</div><div class="name th">Copywriting & MarCom</div><div class="desc th">Social · Corporate · แคมเปญ · Website · TH–EN Localization</div><div class="price">500.-<small>PER PIECE</small></div></div>
-   <div class="row"><div class="num">04</div><div class="name th">Creative Package <span class="pill">4 SETS</span></div><div class="desc th">คอนเซ็ปต์ครีเอทีฟ · Artwork · Caption / Ad Copy</div><div class="price">3,500.-</div></div>
-
-   <div class="breakrow"><strong class="th"><span>มีโจทย์อื่นที่ไม่อยู่ในลิสต์?</span></strong><a class="th" href="https://lin.ee/5E5Cibq" target="_blank">เล่าโจทย์ให้เราฟัง <svg class="icon"><use href="#arrow"/></svg></a></div>
-
-   <div class="row"><div class="num">05</div><div class="name th">ออกแบบ Marketing Deck / Presentation</div><div class="desc th">โครงเรื่อง · Story Flow · ปรับเนื้อหา · ออกแบบ · ประมาณ 10 Slides</div><div class="price">1,500.-</div></div>
-   <div class="row"><div class="num">06</div><div class="name th">Landing Page · Starter</div><div class="desc th">Responsive Front-end · CTA · Form UI · Basic Animation</div><div class="price">3,500.-</div></div>
-   <div class="row"><div class="num">07</div><div class="name th">Landing Page · Marketing</div><div class="desc th">UX / Content Structure · Key Message · Copy · Marketing Flow</div><div class="price">5,000.-</div></div>
-   <div class="row"><div class="num">08</div><div class="name th">ดูแล Paid Ads</div><div class="desc th">วางแคมเปญ · ตั้งกลุ่มเป้าหมาย · ดูแลและ Optimize · สรุป Performance</div><div class="price">6,000.-<small>PER MONTH · PLATFORM</small></div></div>
-   <div class="row"><div class="num">09</div><div class="name th">Paid Ads + Creative <span class="pill">BUNDLE</span></div><div class="desc th">ดูแล Paid Ads + Creative Package</div><div class="price">8,500.-<small>PER MONTH · PLATFORM</small></div></div>
-
-   <div class="breakrow"><strong class="th"><span>อยากให้ช่วยทั้ง Creative + Ads?</span></strong><a class="th" href="https://lin.ee/5E5Cibq" target="_blank">คุยแพ็กเกจรายเดือน <svg class="icon"><use href="#arrow"/></svg></a></div>
-
-   <div class="row"><div class="num">10</div><div class="name th">วางแผนแคมเปญ KOL / Influencer</div><div class="desc th">คอนเซ็ปต์แคมเปญ · KOL Criteria · ทิศทางคอนเทนต์ · บรีฟ</div><div class="price">2,500.-</div></div>
-   <div class="row"><div class="num">11</div><div class="name th">วางแผนการตลาดสำหรับอีเวนต์ / MarCom</div><div class="desc th">คอนเซ็ปต์อีเวนต์ · Communication Plan · Agenda / Flow · ทิศทางคอนเทนต์</div><div class="price">3,500.-</div></div>
-  </div>
-
-  <div class="info-grid">
-   <div class="info glass"><div class="info-top"><span class="small">CREATIVE</span><svg class="icon"><use href="#pen"/></svg></div><h3>Creative Package</h3><p class="th">4 Creative Sets · Concept · Artwork · Caption / Ad Copy · รวมแก้ไข 2 รอบภายใต้ Direction เดิม</p></div>
-   <div class="info glass"><div class="info-top"><span class="small">PAID MEDIA</span><svg class="icon"><use href="#chart"/></svg></div><h3>Paid Ads</h3><p class="th">ไม่รวม Media Spend, Artwork และ Video / Creative Production ค่าโฆษณาชำระตรงกับ Platform</p></div>
-   <div class="info glass"><div class="info-top"><span class="small">DIGITAL</span><svg class="icon"><use href="#layout"/></svg></div><h3>Landing Page</h3><p class="th">ไม่รวม Backend, Database, API / CRM Integration, Domain, Hosting, SEO Service และ Paid Media Tracking</p></div>
-  </div>
- </div>
-</section>
-
-<section class="final">
- <div class="wrap">
-  
-  <h2>HAVE AN<br><em>IDEA?</em><br>LET'S MAKE<br>ANOTHER.</h2>
-  <div class="final-bottom">
-   <p class="th">ส่ง Brief หรือเล่าโจทย์คร่าว ๆ มาได้เลย<br>ประเมิน Scope · Timeline · ราคา ก่อนเริ่มงาน</p>
-   <div class="actions">
-    <a class="button primary" href="https://lin.ee/5E5Cibq" target="_blank">คุยโปรเจกต์ <svg class="icon"><use href="#arrow"/></svg></a>
-    <a class="button" href="https://lin.ee/5E5Cibq" target="_blank">คุยทาง LINE <svg class="icon"><use href="#arrow"/></svg></a>
+  <div class="eyebrow">CHOOSE YOUR WAY</div>
+  <div class="hero-row">
+   <div class="hero-title">
+    <h1 class="th">กำลังมองหา<strong>ANOTHER</strong>แบบไหน?</h1>
+   </div>
+   <div class="hero-side">
+    <p class="hero-copy">เลือกสิ่งที่กำลังมองหา แล้วดูบริการและราคาที่เหมาะกับโจทย์ของคุณ</p>
+    <div class="micro-paths">
+     <div class="micro v"><span class="n">01</span><span>MAKE IT HAPPEN.</span><span class="signal"></span></div>
+     <div class="micro r"><span class="n">02</span><span>MAKE IT EASIER.</span><span class="signal"></span></div>
+    </div>
    </div>
   </div>
+  <div class="hero-route"><div class="route-arm"></div><div class="route-arm"></div><span class="route-dot v"></span><span class="route-dot r"></span></div>
  </div>
 </section>
 
-<footer>
- <div class="wrap foot">
-  <div class="th"><strong>WORKING TERMS</strong><br>Revision 2 รอบภายใต้ Brief / Scope / Direction เดิม · งานตั้งแต่ 1,000 บาทขึ้นไป มัดจำ 50% ก่อนเริ่ม และ 50% ก่อนส่ง Final Files · งานต่ำกว่า 1,000 บาท ชำระเต็มจำนวนก่อนเริ่ม · Timeline ประเมินตาม Scope</div>
-  <div>ANOTHER<br>MARKETING & CREATIVE</div>
+<section class="choose">
+ <div class="wrap">
+  <div class="choose-label">SERVICES & PRICING</div>
+  <div class="panels">
+   <a class="panel marketing" href="marketing-creative.html">
+    <div class="watermark">M</div>
+    <div class="panel-no">01 / MARKETING</div>
+    <div class="panel-title">MARKETING<br><em>& CREATIVE</em></div>
+    <p class="panel-desc">ตั้งแต่ Strategy และแคมเปญ ไปจนถึง Content, Creative, MarCom, Landing Page และ Paid Ads</p>
+    <div class="services"><span>STRATEGY</span><span>CONTENT</span><span>CREATIVE</span><span>MARCOM</span><span>WEB</span><span>PAID ADS</span></div>
+    <div class="explore"><span>VIEW SERVICES & PRICING</span><span class="arrow">→</span></div>
+   </a>
+
+   <a class="panel china" href="language-china.html">
+    <div class="watermark">中</div>
+    <div class="panel-no">02 / CHINA</div>
+    <div class="panel-title">LANGUAGE<br><em>& CHINA</em></div>
+    <p class="panel-desc">งานภาษาไทย · อังกฤษ · จีน, Marketing Localization และ China Trip Planning สำหรับคนที่อยากให้เรื่องจีนง่ายขึ้น</p>
+    <div class="services"><span>翻译</span><span>LOCALIZATION</span><span>PROOFREADING</span><span>CHINA TRIP</span></div>
+    <div class="explore"><span>VIEW SERVICES & PRICING</span><span class="arrow">→</span></div>
+   </a>
+  </div>
  </div>
-</footer>
+</section>
+
+<section class="bridge">
+ <div class="wrap bridge-grid">
+  <h2>NOT SURE<br><em>WHICH WAY?</em></h2>
+  <div class="bridge-right">
+   <p>มีโจทย์อยู่ แต่ยังไม่แน่ใจว่าควรเริ่มจากบริการไหน? เล่าโจทย์คร่าว ๆ มาได้ก่อน แล้วค่อยดูว่า Scope แบบไหนเหมาะที่สุด</p>
+   <a class="line-btn" href="https://lin.ee/5E5Cibq" target="_blank" rel="noopener">TALK ON LINE <span>→</span></a>
+  </div>
+ </div>
+</section>
+
+<footer><div class="wrap"><span>ANOTHER · SERVICES</span><span>MARKETING · LANGUAGE · CHINA</span></div></footer>
 </body>
 </html>

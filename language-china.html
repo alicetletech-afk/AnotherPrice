@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANOTHER — Language & China</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+ --red:#d71920; --deep:#8d0d12; --ink:#171313; --paper:#f5efe4;
+ --paper2:#fffaf1; --gold:#e8b84a; --muted:#766b64; --line:rgba(115,26,23,.17);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Poppins,"IBM Plex Sans Thai",sans-serif}
+.th{font-family:"IBM Plex Sans Thai",sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1220px,calc(100% - 72px));margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font-weight:600;letter-spacing:.18em;font-size:.86rem}
+.nav-right{display:flex;gap:25px;align-items:center;font-size:.68rem;letter-spacing:.11em}
+.back{color:var(--red)}
+.hero{position:relative;min-height:720px;overflow:hidden;background:
+ radial-gradient(circle at 82% 27%,rgba(215,25,32,.10),transparent 28%),
+ linear-gradient(120deg,var(--paper2),var(--paper))}
+.hero:before{content:"";position:absolute;right:-110px;top:95px;width:520px;height:520px;border:1px solid rgba(215,25,32,.13);border-radius:50%}
+.hero-grid{min-height:640px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:7vw}
+.kicker{display:flex;align-items:center;gap:10px;color:var(--red);font-size:.69rem;font-weight:600;letter-spacing:.16em;margin-bottom:27px}
+.kicker:before{content:"";width:38px;height:2px;background:var(--red)}
+h1{margin:0;font-family:"IBM Plex Sans Thai",sans-serif;font-size:clamp(4.2rem,6.6vw,7.4rem);line-height:.98;letter-spacing:-.055em;font-weight:300}
+h1 strong{font-weight:600}
+h1 .china{color:var(--red)}
+.hero-copy{max-width:470px;justify-self:end}
+.hero-copy .cn{font-family:"Noto Serif SC",serif;color:var(--red);font-size:3.3rem;line-height:1;margin-bottom:24px}
+.hero-copy p{font-size:1.04rem;line-height:1.95;color:#514844}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:29px}
+.btn{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--ink);border-radius:999px;padding:13px 18px;font-size:.69rem;font-weight:600;letter-spacing:.07em}
+.btn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.btn svg{width:14px;height:14px}
+.travel-strip{background:var(--red);color:#fff;overflow:hidden;padding:13px 0;font-size:.68rem;letter-spacing:.15em;white-space:nowrap}
+.travel-strip div{width:max-content;animation:marquee 28s linear infinite}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* China travel editorial */
+.intro{padding:100px 0 84px}
+.intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw;align-items:end}
+.cn-mark{font-family:"Noto Serif SC",serif;color:var(--red);font-size:clamp(5rem,10vw,9rem);line-height:.8}
+.intro h2{font-size:clamp(2.7rem,4.5vw,5rem);line-height:1.04;letter-spacing:-.045em;margin:0 0 24px;font-weight:500}
+.intro p{max-width:650px;color:var(--muted);line-height:1.9;margin:0}
+.route{margin-top:60px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr)}
+.city{padding:22px 12px;border-right:1px solid var(--line)}
+.city:last-child{border:0}
+.city span{display:block;font-family:"Noto Serif SC",serif;color:var(--red);font-size:1.35rem}
+.city small{font-size:.62rem;letter-spacing:.12em;color:var(--muted)}
+
+/* pricing */
+.pricing{padding:100px 0 110px;background:#171313;color:#f8f0e5}
+.pricing-head{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;margin-bottom:55px}
+.pricing h2{font-size:clamp(3.7rem,6vw,6.5rem);line-height:.9;letter-spacing:-.055em;margin:0;font-weight:500}
+.pricing h2 em{font-family:"Noto Serif SC",serif;font-style:normal;color:#f04742}
+.pricing-lead{color:#b9aaa2;line-height:1.85;max-width:470px;justify-self:end}
+.group-label{display:flex;align-items:center;gap:14px;margin:55px 0 15px;color:#f04742;font-size:.67rem;letter-spacing:.16em;font-weight:600}
+.group-label:after{content:"";height:1px;flex:1;background:rgba(240,71,66,.25)}
+.rate{border-top:1px solid rgba(255,255,255,.16)}
+.row{display:grid;grid-template-columns:52px 1.1fr 1.5fr .65fr;gap:28px;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.13);align-items:start}
+.num{font-size:.62rem;color:#806f68}
+.name{font-weight:500;font-size:1.08rem}
+.name-cn{font-family:"Noto Serif SC",serif;color:#f04742;font-size:.86rem;margin-top:5px}
+.desc{font-size:.84rem;line-height:1.75;color:#b8aaa4}
+.price{text-align:right;font-size:1.55rem;font-weight:500;white-space:nowrap}
+.price small{display:block;font-size:.53rem;letter-spacing:.12em;color:#887b76;margin-top:5px}
+.tag{display:inline-block;border:1px solid #f04742;color:#f04742;border-radius:99px;padding:4px 7px;font-size:.48rem;letter-spacing:.09em;margin-left:6px;vertical-align:2px}
+.note-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:54px}
+.note{border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:25px;background:rgba(255,255,255,.025)}
+.note b{font-size:.67rem;color:#f04742;letter-spacing:.1em}
+.note p{font-size:.78rem;color:#a99a94;line-height:1.75;margin:12px 0 0}
+
+/* travel cue, not stock-photo dependent */
+.trip{padding:110px 0;background:var(--paper2)}
+.trip-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;align-items:center}
+.trip h2{font-size:clamp(3.4rem,5.5vw,6rem);line-height:.96;letter-spacing:-.055em;margin:0}
+.trip h2 span{color:var(--red)}
+.passport{position:relative;min-height:390px;border:1px solid var(--line);border-radius:28px;background:
+ linear-gradient(145deg,rgba(255,255,255,.72),rgba(255,245,228,.45));padding:36px;overflow:hidden}
+.passport:before{content:"中国";font-family:"Noto Serif SC",serif;position:absolute;right:-15px;bottom:-42px;font-size:12rem;color:rgba(215,25,32,.07)}
+.flag{width:92px;height:60px;background:var(--red);position:relative;box-shadow:0 15px 35px rgba(141,13,18,.16)}
+.star{position:absolute;color:#ffde55;line-height:1}
+.star.big{font-size:25px;left:9px;top:7px}
+.star.s1{font-size:8px;left:37px;top:7px}.star.s2{font-size:8px;left:44px;top:17px}.star.s3{font-size:8px;left:44px;top:30px}.star.s4{font-size:8px;left:36px;top:39px}
+.passport .eyebrow{margin-top:75px;font-size:.63rem;letter-spacing:.14em;color:var(--red)}
+.passport h3{font-family:"Noto Serif SC",serif;font-size:2.7rem;margin:9px 0}
+.passport p{max-width:330px;color:var(--muted);line-height:1.8;font-size:.84rem}
+.final{background:var(--red);color:#fff;padding:95px 0}
+.final-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;align-items:center}
+.final h2{font-size:clamp(3.5rem,6vw,6.7rem);line-height:.94;letter-spacing:-.055em;margin:0}
+.final .cn{font-family:"Noto Serif SC",serif;color:#ffdc73}
+.final p{line-height:1.9;color:#ffe5df}
+.final .btn{border-color:#fff;color:#fff}
+footer{background:#171313;color:#81736d;padding:24px 0;font-size:.61rem;letter-spacing:.1em}
+footer .wrap{display:flex;justify-content:space-between}
+@media(max-width:800px){
+ .wrap{width:min(100% - 34px,1220px)}
+ nav{height:66px}.nav-right span{display:none}
+ .hero{min-height:auto}.hero-grid{display:block;min-height:auto;padding:72px 0 75px}
+ h1{font-size:clamp(3.65rem,16vw,5.4rem)}
+ .hero-copy{margin-top:50px}.hero-copy .cn{font-size:2.5rem}
+ .intro{padding:75px 0}.intro-grid,.pricing-head,.trip-grid,.final-grid{grid-template-columns:1fr;gap:45px}
+ .cn-mark{font-size:5rem}.route{grid-template-columns:1fr 1fr}.city:nth-child(2n){border-right:0}
+ .pricing{padding:78px 0}
+ .row{grid-template-columns:34px 1fr auto;gap:12px 15px}
+ .row .desc{grid-column:2 / 4}
+ .price{font-size:1.2rem}
+ .note-grid{grid-template-columns:1fr}
+ .trip{padding:80px 0}.passport{min-height:340px}
+ .final{padding:78px 0}
+ footer .wrap{gap:15px;flex-direction:column}
+}
+</style>
+
+<style>
+.back-to-top{
+  position:fixed;right:22px;bottom:22px;z-index:60;
+  width:48px;height:48px;border-radius:999px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(20,20,20,.16);
+  background:rgba(255,255,255,.72);
+  color:inherit;text-decoration:none;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .25s ease,transform .25s ease,visibility .25s ease;
+  font-size:18px;
+}
+.back-to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{transform:translateY(-2px)}
+@media(max-width:600px){.back-to-top{right:16px;bottom:16px;width:44px;height:44px}}
+</style>
+
+</head>
+<body id="top">
+<svg width="0" height="0" style="position:absolute"><symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol></svg>
+
+<header class="wrap">
+<nav>
+ <a class="logo" href="index.html">ANOTHER</a>
+ <div class="nav-right"><span>LANGUAGE · CHINA</span><a class="back" href="index.html">ALL SERVICES ↗</a></div>
+</nav>
+</header>
+
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="kicker">LANGUAGE & CHINA SERVICES</div>
+   <h1 class="th">เรื่องภาษา<br><strong>และเที่ยว<span class="china">จีน</span></strong><br>ให้ง่ายขึ้น</h1>
+  </div>
+  <div class="hero-copy">
+   <div class="cn">你好，中国。</div>
+   <p class="th">ตั้งแต่งานภาษา <strong>ไทย · อังกฤษ · จีน</strong> การปรับข้อความให้เข้ากับตลาด ไปจนถึงวางแผนทริปจีนแบบที่เปิดดูแล้วเดินทางต่อได้จริง</p>
+   <div class="actions"><a class="btn primary th" href="#rates">ดูบริการและราคา <svg><use href="#arrow"/></svg></a><a class="btn th" href="https://lin.ee/5E5Cibq" target="_blank">คุยทาง LINE <svg><use href="#arrow"/></svg></a></div>
+  </div>
+ </div>
+</section>
+
+<div class="travel-strip"><div>BEIJING · SHANGHAI · GUANGZHOU · SHENZHEN · CHENGDU · CHONGQING · HANGZHOU · XI’AN · BEIJING · SHANGHAI · GUANGZHOU · SHENZHEN · CHENGDU · CHONGQING · HANGZHOU · XI’AN · </div></div>
+
+<section class="intro">
+ <div class="wrap">
+  <div class="intro-grid">
+   <div class="cn-mark">去中国</div>
+   <div>
+    <h2>ภาษาไม่ควรทำให้<br><span style="color:var(--red)">เรื่องจีนยากเกินไป</span></h2>
+    <p class="th">บางงานต้องการคำแปลที่อ่านเป็นธรรมชาติ บางทริปต้องการมากกว่า list สถานที่ — เลือกเฉพาะสิ่งที่ต้องใช้ แล้วค่อยจัด Scope ให้เหมาะกับโจทย์จริง</p>
+   </div>
+  </div>
+  <div class="route">
+   <div class="city"><span>北京</span><small>BEIJING</small></div>
+   <div class="city"><span>上海</span><small>SHANGHAI</small></div>
+   <div class="city"><span>广州</span><small>GUANGZHOU</small></div>
+   <div class="city"><span>深圳</span><small>SHENZHEN</small></div>
+   <div class="city"><span>成都</span><small>CHENGDU</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="pricing" id="rates">
+ <div class="wrap">
+  <div class="pricing-head">
+   <h2>CHOOSE YOUR<br><em>路线.</em></h2>
+   <p class="pricing-lead th">ราคาเริ่มต้น · Final quotation ประเมินตามคู่ภาษา ปริมาณเนื้อหา ความซับซ้อน และ Scope ของงาน</p>
+  </div>
+
+  <div class="group-label">LANGUAGE SERVICES</div>
+  <div class="rate">
+   <div class="row"><div class="num">01</div><div><div class="name th">แปลภาษา TH / EN / CN</div><div class="name-cn">翻译</div></div><div class="desc th">เอกสารทั่วไป · Presentation · Website · Social · Business · Product / Service</div><div class="price">300–500.-<small>PER PAGE</small></div></div>
+   <div class="row"><div class="num">02</div><div><div class="name">Marketing Localization</div><div class="name-cn">本地化</div></div><div class="desc th">ปรับภาษา Tone และบริบทให้เข้ากับกลุ่มเป้าหมาย · Marketing · แคมเปญ · Website · Social</div><div class="price">500.-<small>PER PIECE</small></div></div>
+   <div class="row"><div class="num">03</div><div><div class="name">Proofreading & Language Refinement</div><div class="name-cn">语言润色</div></div><div class="desc th">Grammar · Wording · Tone · Sentence Flow · Business / Marketing Language</div><div class="price">300.-<small>STARTING FROM</small></div></div>
+  </div>
+
+  <div class="group-label">CHINA TRIP PLANNING</div>
+  <div class="rate">
+   <div class="row"><div class="num">04</div><div><div class="name">MINI</div><div class="name-cn">轻松出发</div></div><div class="desc th">1–3 วัน · Itinerary · สถานที่ · Route เบื้องต้น · การเดินทาง · ร้านอาหาร / Shopping</div><div class="price">590.-</div></div>
+   <div class="row"><div class="num">05</div><div><div class="name">FULL <span class="tag">POPULAR</span></div><div class="name-cn">完整路线</div></div><div class="desc th">ประมาณ 4–7 วัน · Daily Route · Transportation · ชื่อและที่อยู่ภาษาจีน · ร้านอาหาร / Shopping · Area Tips · China Apps</div><div class="price">1,090.-</div></div>
+   <div class="row"><div class="num">06</div><div><div class="name">COMPLETE</div><div class="name-cn">安心中国行</div></div><div class="desc th">Full + ตัวเลือกโรงแรม / เที่ยวบิน · Route Optimization · Transport Guide · Alipay / WeChat / Map / Metro Guide · China Immigration Phrase Guide</div><div class="price">1,690.-</div></div>
+   <div class="row"><div class="num">+</div><div><div class="name">China Immigration Phrase Guide</div><div class="name-cn">入境常用语</div></div><div class="desc th">คำศัพท์และประโยคจีน / อังกฤษสำหรับเตรียมตอบคำถามที่ ตม. · จุดประสงค์การเดินทาง · จำนวนวัน · ที่พัก · เมืองที่ไป · ตั๋วขากลับ · Quick Answer Card <span style="color:#f04742">· รวมแล้วใน COMPLETE</span></div><div class="price">290.-<small>ADD-ON</small></div></div>
+  </div>
+
+  <div class="note-grid">
+   <div class="note"><b>TRANSLATION SCOPE</b><p class="th">ราคา Final ขึ้นอยู่กับคู่ภาษา จำนวนคำ และความซับซ้อน · ไม่รวม Certified Translation, Legal, Medical และ Live Interpreting</p></div>
+   <div class="note"><b>LOCALIZATION</b><p class="th">เน้นปรับภาษา Tone และบริบทให้เหมาะกับกลุ่มเป้าหมาย ไม่ใช่การแปลตรงตัว</p></div>
+   <div class="note"><b>TRIP PLANNING</b><p class="th">เป็นบริการวางแผนและให้ข้อมูล ลูกค้าเป็นผู้จองและชำระโรงแรม ตั๋ว ร้านอาหาร และบริการต่าง ๆ ด้วยตนเอง · Immigration Phrase Guide เป็นเครื่องมือเตรียมภาษา ไม่ใช่การรับประกันผลการตรวจคนเข้าเมือง</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="trip">
+ <div class="wrap trip-grid">
+  <div>
+   <div class="kicker">CHINA, WITHOUT THE GUESSWORK</div>
+   <h2>ไปจีนแบบมี<br><span>路线</span> ที่ชัดเจน</h2>
+   <p class="th" style="max-width:590px;color:var(--muted);line-height:1.9;margin-top:25px">รู้ว่าแต่ละวันไปไหน เดินทางยังไง ชื่อสถานที่ภาษาจีนคืออะไร และควรเตรียมแอปไหนก่อนถึงจีน — ไม่ต้องเปิดสิบหน้าต่างเพื่อประกอบทริปเอง</p>
+  </div>
+  <div class="passport">
+   <div class="flag"><span class="star big">★</span><span class="star s1">★</span><span class="star s2">★</span><span class="star s3">★</span><span class="star s4">★</span></div>
+   <div class="eyebrow">YOUR CHINA ROUTE</div>
+   <h3>一路顺风</h3>
+   <p class="th">แพลนที่อ่านง่าย ใช้งานระหว่างเดินทางได้ และมีข้อมูลจีนที่จำเป็นอยู่ในที่เดียว</p>
+  </div>
+ </div>
+</section>
+
+<section class="final">
+ <div class="wrap final-grid">
+  <h2>READY FOR<br><span class="cn">中国?</span></h2>
+  <div><p class="th">มีงานภาษา หรือกำลังวางแผนไปจีน? ส่งรายละเอียดงาน / เมือง / วันที่เดินทาง / จำนวนวัน มาให้ดูก่อนได้</p><div class="actions"><a class="btn th" href="https://lin.ee/5E5Cibq" target="_blank">คุยทาง LINE <svg><use href="#arrow"/></svg></a></div></div>
+ </div>
+</section>
+
+<footer><div class="wrap"><span>ANOTHER · LANGUAGE & CHINA</span><span>TH · EN · CN</span></div></footer>
+<a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top">↑</a>
+
+<script>
+const backToTop=document.querySelector('.back-to-top');
+const toggleBackToTop=()=>backToTop.classList.toggle('show',window.scrollY>420);
+window.addEventListener('scroll',toggleBackToTop,{passive:true});
+toggleBackToTop();
+</script>
+
+</body>
+</html>
