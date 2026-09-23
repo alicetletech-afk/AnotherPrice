@@ -524,6 +524,51 @@ body.modal-open{overflow:hidden}
 }
 </style>
 
+
+<style>
+/* ANOTHER — people section portrait 3:4 refinement */
+@media(min-width:761px){
+  .people-grid{
+    width:min(780px,100%) !important;
+    margin:0 auto !important;
+    gap:24px !important;
+  }
+}
+.person-photo{
+  aspect-ratio:3 / 4 !important;
+  height:auto !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+}
+.person-photo img{
+  object-fit:cover !important;
+}
+.person.alice .person-photo img{
+  object-position:center 18% !important;
+}
+.person.nammon .person-photo img{
+  object-position:center 20% !important;
+}
+.person-meta{
+  align-items:end !important;
+}
+.person-name{
+  line-height:.96 !important;
+}
+.person-role{
+  margin-top:8px !important;
+}
+
+@media(max-width:760px){
+  .people-grid{
+    gap:38px !important;
+  }
+  .person-photo{
+    aspect-ratio:3 / 4 !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="wrap">
